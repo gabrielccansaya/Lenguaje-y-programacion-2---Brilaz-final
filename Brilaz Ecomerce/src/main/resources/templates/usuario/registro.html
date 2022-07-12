@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Brilaz eCommerce</title>
+
+
+        <!-- Bootstrap core CSS -->
+        <link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
+              rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link th:href="@{/css/heroic-features.css}" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+            <div class="container">
+                <a class="navbar-brand" th:href="@{/}"><img src="https://i.ibb.co/PD1cWwF/brilazz1.png" alt="brilazz1" border="0" /></a>
+
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" th:href="@{/usuario/login}">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Page Content -->
+
+
+        <div class="container">
+
+
+
+
+            <header class="container">
+
+                <div class="contenedor">
+                    <a href="#">
+                        <figure>
+                            <img src="https://static.vecteezy.com/system/resources/previews/002/761/909/non_2x/light-green-backdrop-with-lines-repeated-lines-on-abstract-background-with-gradient-template-for-your-ui-design-vector.jpg">
+                            <div class="capa">
+                                <aside></aside>                    
+                                <form th:action="@{/usuario/save}" method="post" id="formulario">
+                                    <h1>NUEVO USUARIO<img src="https://cdn-icons.flaticon.com/png/512/5645/premium/5645106.png?token=exp=1657575625~hmac=db187f349bde1456ef928b2c8172e7f1" alt="lss" border="0" id="im"/></h1>
+                                    
+                                    <div class="form-group">
+                                        <label for="nombres">Nombres:</label> <input type="text"
+                                                                                     class="form-control" id="nombre" name="nombre" required
+                                                                                     placeholder="Ingrese sus nombres" autocomplete="off">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email:</label> <input type="email"
+                                                                                 class="form-control" id="email" name="email" required
+                                                                                 placeholder="Ingrese su email" autocomplete="off">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="direccion">Dirección:</label> <input type="text"
+                                                                                         class="form-control" id="direccion" name="direccion" required
+                                                                                         placeholder="Ingrese su dirección" autocomplete="off">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pwd">Contraseña</label> <input type="password"
+                                                                                   class="form-control" id="password" name="password" required
+                                                                                   placeholder="Ingrese su contraseña" autocomplete="off">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <button type="submit" class="btn btn-success">Guardar</button>
+                                    </div>
+                                </form>
+                                <button ><a th:href="@{/usuario/registro}" class="card-link"></a></button>
+                                <aside></aside>   
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+
+            </header>
+
+        </div>
+
+        <!-- /.container -->
+
+        <!-- Footer -->
+        <div th:include="usuario/template_usuario.html::footer"></div>
+
+        <!-- Bootstrap core JavaScript -->
+        <script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+        <script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Brilaz eCommerce</title>
+
+
+  <!-- Bootstrap core CSS -->
+<link th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link th:href="@{/css/heroic-features.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+ <div th:include="usuario/template_usuario.html::header-user"></div>
+
+ 
+ <div class="contenedor">
+                    <a href="#">
+                        <figure>
+                            <img src="https://prazeres.com.ar/uploads/GRACIAS%20POR%20TU%20COMPRA%20985%20X/gracias.jpg">
+                            <div class="capa">
+
+                                <h3><a class="dropdown-item" th:href="@{/usuario/compras}" >Puedes ver tus compras aqui</a></h3>
+                                
+                            </div>
+                        </figure>
+                    </a>
+                </div>
+
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <div th:include="usuario/template_usuario.html::footer">
+	</div>
+
+	<!-- Bootstrap core JavaScript -->
+	<script th:src="@{/vendor/jquery/jquery.min.js}"></script>
+	<script th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+</body>
+
+</html>

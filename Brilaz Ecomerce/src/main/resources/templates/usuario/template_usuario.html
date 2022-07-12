@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Brilaz eCommerce</title>
+
+
+        <!-- Bootstrap core CSS -->
+        <link th:href="@{vendor/bootstrap/css/bootstrap.min.css}"
+              rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link th:href="@{css/heroic-features.css}" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <!-- Navigation -->
+
+        <div th:fragment="header" >
+
+
+
+
+
+            <div class="burbujas">
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+            </div>
+
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" th:href="@{/}">  <img src="https://i.ibb.co/PD1cWwF/brilazz1.png" alt="brilazz1" border="0" /></a>
+
+                    <form class="form-inline my-2 my-lg-0" method="post" th:action="@{/search}">
+                        <input class="form-control mr-sm-2" type="search"
+                               placeholder="Buscar" aria-label="Search" name="nombre"
+                               autocomplete="off" size="70px">
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" th:href="@{/getCart}">       <img src="https://i.ibb.co/w6kZqt7/icono-carrito1.png" alt="icono-carrito1" border="0" />    </a></li>
+                            <li class="nav-item"><a class="nav-link" th:href="@{/usuario/login}"  id="login"><img src="https://i.ibb.co/98WycRy/man-user.png" alt="man-user" border="0" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+
+        <!-- Navigation -->
+        <div th:fragment="header-user">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" th:href="@{/}"><img src="https://i.ibb.co/PD1cWwF/brilazz1.png" alt="brilazz1" border="0" /></a>
+
+                    <form class="form-inline my-2 my-lg-0" method="post" th:action="@{/search}">
+                        <input class="form-control mr-sm-2" type="search"
+                               placeholder="Buscar" aria-label="Search" name="nombre"
+                               autocomplete="off" size="80px">
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown"><a
+                                    class="nav-link dropdown-toggle" href="#"
+                                    id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"> USER </a>
+
+                                <div class="dropdown-menu"
+                                     aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" th:href="@{/usuario/compras}">Compras</a>
+                                    <a class="dropdown-item" th:href="@{/getCart}">Carrito</a> 
+                                    <a class="dropdown-item" th:href="@{/usuario/cerrar}">Salir</a> 
+                                </div></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+
+
+        <!-- Footer -->
+        <div th:fragment="footer">
+            <footer class="py-5 bg-transparent">
+                <div class="container">
+
+                    <p class="m-0 text-center text-white">Copyright &copy; Cientifica del Sur -  <img src="https://i.ibb.co/0YnMvff/made1.png" alt="made1" border="0" /><img src="https://i.ibb.co/cLtyFkf/brilaz4.png" alt="brilaz4" border="0" /> Spring
+                        Ecomerce 2022 </p>
+                </div>
+                <!-- /.container -->
+            </footer>
+
+        </div>
+
+        <!-- Bootstrap core JavaScript -->
+        <script th:src="@{vendor/jquery/jquery.min.js}"></script>
+        <script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+    </body>
+
+</html>
